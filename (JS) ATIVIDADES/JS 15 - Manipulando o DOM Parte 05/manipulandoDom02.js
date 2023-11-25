@@ -3,7 +3,6 @@ var itens = [];
 var quantidades = [];
 var valores = [];
 
-// Adicionar item à lista
 function adicionarItem() {
     var item = document.getElementById("item").value;
     var quantidade = parseInt(document.getElementById("qtde").value);
@@ -22,7 +21,6 @@ function adicionarItem() {
     }
 }
 
-// Atualizar as listas na página
 function atualizarListas() {
     var listaItens = document.getElementById("listaItens");
     var listaTotal = document.getElementById("listaTotal");
@@ -37,7 +35,6 @@ function atualizarListas() {
         itemLista.className = "list-group-item d-flex justify-content-between align-items-center";
         itemLista.innerHTML = `${quantidades[i]} ${itens[i]} - ${quantidades[i] * valores[i].toFixed(2)}`;
 
-        // Botões de controle
         var grupoBotoes = document.createElement("div");
         grupoBotoes.className = "btn-group";
         grupoBotoes.setAttribute("role", "group");
@@ -53,7 +50,6 @@ function atualizarListas() {
         itemLista.appendChild(grupoBotoes);
         listaItens.appendChild(itemLista);
 
-        // Atualizar total da compra
         totalCompra += quantidades[i] * valores[i];
         var totalItem = document.createElement("li");
         totalItem.className = "list-group-item d-flex justify-content-between align-items-center";
@@ -61,14 +57,12 @@ function atualizarListas() {
         listaTotal.appendChild(totalItem);
     }
 
-    // Adicionar o total geral
     var totalGeral = document.createElement("li");
     totalGeral.className = "list-group-item d-flex justify-content-between align-items-center font-weight-bold";
     totalGeral.textContent = `Total Geral: ${totalCompra.toFixed(2)}`;
     listaTotal.appendChild(totalGeral);
 }
 
-// Criar botão de controle
 function criarBotaoControle(rotulo, indice, classeBtn, manipulador) {
     var btn = document.createElement("button");
     btn.type = "button";
@@ -79,13 +73,11 @@ function criarBotaoControle(rotulo, indice, classeBtn, manipulador) {
     return btn;
 }
 
-// Adicionar quantidade
 function adicionarQuantidade(indice) {
     quantidades[indice]++;
     atualizarListas();
 }
 
-// Subtrair quantidade
 function subtrairQuantidade(indice) {
     if (quantidades[indice] > 1) {
         quantidades[indice]--;
@@ -93,7 +85,6 @@ function subtrairQuantidade(indice) {
     }
 }
 
-// Remover item
 function removerItem(indice) {
     itens.splice(indice, 1);
     quantidades.splice(indice, 1);
@@ -101,7 +92,6 @@ function removerItem(indice) {
     atualizarListas();
 }
 
-// Limpar formulário
 function limparFormulario() {
     document.getElementById("item").value = "";
     document.getElementById("qtde").value = "";
