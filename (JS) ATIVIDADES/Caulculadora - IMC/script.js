@@ -1,5 +1,4 @@
 function calcularIMC() {
-    // Obtendo os valores inseridos
     var altura = parseFloat(document.getElementById('altura').value);
     var peso = parseFloat(document.getElementById('peso').value);
 
@@ -10,7 +9,7 @@ function calcularIMC() {
     }
 
     var imc = peso / (altura * altura);
-
+    //exibindo valores  :)
     var resultadoDiv = document.getElementById('resultado');
     resultadoDiv.innerHTML = '<h2>Resultado</h2>' +
         '<p>Nome: ' + document.getElementById('nome').value + '</p>' +
