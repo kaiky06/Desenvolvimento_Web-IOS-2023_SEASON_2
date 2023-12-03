@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url(fundo_porPanda.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: none;
+    /* background-position: valor-horizontal valor-vertical; */
+}
+
+.margem_padding {
+    border: 5px rgb(0, 0, 0) solid;
+    padding: 15px 5px 10px 0.1px;
+    margin: 6cm 4cm 6cm 4cm;
+    /*medida absoluta*/
+    background-color: rgba(240, 248, 255, 0.462);
+
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 36px;
+    text-align: center;
+    font-style: oblique;
+    color: rgb(0, 0, 0);
+}
+
+h2 {
+    font-size: 26px;
+}
+
+p {
+    text-indent: 25px;
+    word-spacing: 3px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 140%;
+    text-align: justify;
+    font-style: italic;
+}
+
+/*medidas absolutas*/
+#p1Absoluta {
+    font-size: 1cm;
+    background-color: yellow;
+}
+
+#p2Absoluta {
+    font-size: 0.5in;
+    /*1n equivalente a 96px*/
+    background-color: aqua;
+}
+
+#p3Absoluta {
+    font-size: 17px;
+    background-color: rgb(232, 141, 226);
+}
+
+/*medidas relativas*/
+#p1Relativa {
+    font-size: 2rem;
+    /*equivalente a 32px*/
+    background-color: red;
+}
+
+#p2Relativa {
+    width: 50vw;
+    height: 14vh;
+    background-color: greenyellow;
+}
+
+#p3Relativa {
+    font-size: 2vmax;
+    /*2% de 1000 que é 20px*/
+    background-color: rgb(219, 102, 18);
+}
+
+a {
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    border-radius: 6px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    font-size: medium;
+}
+
+a:hover{
+    background: white;
+    color: #007bff;
+
+}

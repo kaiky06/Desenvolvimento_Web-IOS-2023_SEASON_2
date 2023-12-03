@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Lista de Compras</title>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h2>Lista de Compras</h2>
+        <form id="formularioCompras">
+            <div class="form-row">
+                <div class="col-md-3">
+                    <label for="item">Item</label>
+                    <input type="text" class="form-control" id="item" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="qtde">Quantidade</label>
+                    <input type="number" class="form-control" id="qtde" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="valor">Valor</label>
+                    <input type="number" class="form-control" id="valor" required>
+                </div>
+                <div class="col-md-3 mt-4">
+                    <button type="button" class="btn btn-primary" onclick="adicionarItem()">Adicionar</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h3>Lista de Itens</h3>
+                <ul id="listaItens" class="list-group"></ul>
+            </div>
+            <div class="col-md-6">
+                <h3>Total da Compra</h3>
+                <ul id="listaTotal" class="list-group"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
