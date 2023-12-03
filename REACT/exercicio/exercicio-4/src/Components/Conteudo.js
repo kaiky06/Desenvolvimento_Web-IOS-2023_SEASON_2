@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Conteudo.css'; // Certifique-se de ter um arquivo CSS para estilos
+import './Conteudo.css'; 
 
 const Conteudo = () => {
   const [contador, setContador] = useState('');
