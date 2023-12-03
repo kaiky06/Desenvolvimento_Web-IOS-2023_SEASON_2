@@ -1,0 +1,16 @@
+.excellent-feedback {
+    color: green;
+  }
+  
+  .good-feedback {
+    color: blue;
+  }
+  
+  .bad-feedback {
+    color: orange;
+  }
+  
+  .terrible-feedback {
+    color: red;
+  }
+  
